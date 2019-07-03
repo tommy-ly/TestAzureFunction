@@ -14,7 +14,7 @@ namespace MyFunction
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("I'm now a changed man");
+            log.LogInformation("I'm now a changed man 2");
 
             return new OkResult	();
         }
