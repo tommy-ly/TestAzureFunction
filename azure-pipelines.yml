@@ -25,7 +25,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    publishWebProjects: true
+    publishWebProjects: false
     modifyOutputPath: true
     zipAfterPublish: false
     arguments: '--no-restore --configuration Release --output publish_output'
