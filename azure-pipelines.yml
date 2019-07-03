@@ -25,5 +25,20 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    publishWebProjects: false
-    arguments: '--no-restore --configuration Release --output $(Build.ArtifactStagingDirectory)'
+    publishWebProjects: true
+    modifyOutputPath: true
+    zipAfterPublish: false
+    arguments: '--no-restore --configuration Release --output publish_output'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/publish_output'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
+    ArtifactName: 'drop'
