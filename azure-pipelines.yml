@@ -28,7 +28,7 @@ steps:
     publishWebProjects: false
     modifyOutputPath: false
     zipAfterPublish: false
-    arguments: '--no-restore --configuration Release --output publish_output'
+    arguments: '--no-restore --configuration Release --output ../publish_output'
 
 - task: ArchiveFiles@2
   inputs:
