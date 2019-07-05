@@ -43,7 +43,7 @@ steps:
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
-    versionSelector: 'latestStable'
+    versionSelector: 'latestPreRelease'
 
 - task: VSTest@2
   inputs:
@@ -54,7 +54,7 @@ steps:
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
     pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)/publish_output/bin'
-    vsTestVersion: '16.0'
+    vsTestVersion: 'toolsInstaller'
    
 - task: PublishTestResults@2
   inputs:
