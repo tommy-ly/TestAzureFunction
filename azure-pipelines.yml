@@ -26,6 +26,15 @@ steps:
     modifyOutputPath: false
     zipAfterPublish: false
     arguments: '--no-restore --configuration Release --output ../publish_output'
+    
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: '**\*Tests*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    otherConsoleOptions: '/framework:".NETCoreApp,Version=v2.0"'
 
 - task: ArchiveFiles@2
   inputs:
