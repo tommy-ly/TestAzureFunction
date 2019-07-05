@@ -36,7 +36,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'cd ''.\publish_output'';
-      ls;'
+      ls;
+      cd ''.\bin'';
+      ls'
 
 - task: DotNetCoreCLI@2
   inputs:
