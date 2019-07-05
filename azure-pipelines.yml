@@ -50,7 +50,7 @@ steps:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\*Tests*.dll
-      !**\*TestAdapter.dll
+      !**\*testadapter.dll
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
     pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)/publish_output/bin'
