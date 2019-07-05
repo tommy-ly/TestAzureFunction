@@ -33,7 +33,7 @@ steps:
     testAssemblyVer2: '**\*Tests*.dll
       !**\*TestAdapter.dll
       !**\obj\**'
-    searchFolder: '$(System.DefaultWorkingDirectory)'
+    searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
     otherConsoleOptions: '/framework:".NETCoreApp,Version=v2.1"'
 
 - task: ArchiveFiles@2
