@@ -32,6 +32,10 @@ steps:
     targetType: 'inline'
     script: 'ls'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
