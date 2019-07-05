@@ -1,0 +1,14 @@
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\MyFunction.Tests.deps.json
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\MyFunction.Tests.runtimeconfig.json
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\MyFunction.Tests.runtimeconfig.dev.json
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\MyFunction.Tests.dll
+C:\dev\TestAzureFunction\MyFunction.Tests\bin\Debug\netcoreapp2.1\MyFunction.Tests.pdb
+C:\dev\TestAzureFunction\MyFunction.Tests\obj\Debug\netcoreapp2.1\MyFunction.Tests.csprojAssemblyReference.cache
+C:\dev\TestAzureFunction\MyFunction.Tests\obj\Debug\netcoreapp2.1\MyFunction.Tests.csproj.CoreCompileInputs.cache
+C:\dev\TestAzureFunction\MyFunction.Tests\obj\Debug\netcoreapp2.1\MyFunction.Tests.AssemblyInfoInputs.cache
+C:\dev\TestAzureFunction\MyFunction.Tests\obj\Debug\netcoreapp2.1\MyFunction.Tests.AssemblyInfo.cs
+C:\dev\TestAzureFunction\MyFunction.Tests\obj\Debug\netcoreapp2.1\MyFunction.Tests.dll
+C:\dev\TestAzureFunction\MyFunction.Tests\obj\Debug\netcoreapp2.1\MyFunction.Tests.pdb
