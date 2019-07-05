@@ -58,7 +58,6 @@ steps:
       !**\*testadapter.dll
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
-    pathtoCustomTestAdapters: '$(System.DefaultWorkingDirectory)/publish_output/'
     vsTestVersion: 'toolsInstaller'
    
 - task: PublishTestResults@2
