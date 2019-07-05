@@ -52,8 +52,7 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
-    otherConsoleOptions: '/framework:".NETCoreApp,Version=v2.1"'
-
+    
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)/publish_output'
