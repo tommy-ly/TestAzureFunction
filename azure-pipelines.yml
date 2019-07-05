@@ -40,10 +40,6 @@ steps:
       cd ''.\bin'';
       ls'
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
@@ -58,6 +54,11 @@ steps:
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
     vsTestVersion: 'toolsInstaller'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/*.trx'
     
 - task: ArchiveFiles@2
   inputs:
