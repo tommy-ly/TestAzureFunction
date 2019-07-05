@@ -27,16 +27,6 @@ steps:
     zipAfterPublish: false
     arguments: '--no-restore --configuration Release --output ../publish_output'
 
-
-
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: '**\*Tests*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**'
-    searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
-
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)/publish_output'
