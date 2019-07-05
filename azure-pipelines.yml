@@ -26,7 +26,12 @@ steps:
     modifyOutputPath: false
     zipAfterPublish: false
     arguments: '--no-restore --configuration Release --output ../publish_output'
-    
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'ls'
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
