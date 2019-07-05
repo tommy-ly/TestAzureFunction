@@ -57,6 +57,7 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
+    vsTestVersion: 'toolsInstaller'
     
 - task: ArchiveFiles@2
   inputs:
