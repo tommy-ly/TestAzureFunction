@@ -34,7 +34,7 @@ steps:
       !**\*TestAdapter.dll
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    otherConsoleOptions: '/framework:".NETCoreApp,Version=v2.0"'
+    otherConsoleOptions: '/framework:".NETCoreApp,Version=v2.1"'
 
 - task: ArchiveFiles@2
   inputs:
