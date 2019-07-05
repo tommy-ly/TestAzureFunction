@@ -32,7 +32,11 @@ steps:
     targetType: 'inline'
     script: 'ls'
 
-
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'cd ''.\publish_output'';
+      ls;'
 
 - task: DotNetCoreCLI@2
   inputs:
