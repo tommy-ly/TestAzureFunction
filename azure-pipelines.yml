@@ -44,6 +44,11 @@ steps:
   inputs:
     command: 'test'
 
+- task: VisualStudioTestPlatformInstaller@1
+  inputs:
+    packageFeedSelector: 'nugetOrg'
+    versionSelector: 'latestStable'
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
