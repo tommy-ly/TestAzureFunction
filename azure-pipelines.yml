@@ -30,7 +30,7 @@ steps:
     publishWebProjects: false
     modifyOutputPath: false
     zipAfterPublish: false
-    arguments: '--no-restore --configuration Release --output ../publish_output'
+    arguments: '--no-restore --configuration Release --self-contained --output ../publish_output'
 
 - task: PowerShell@2
   inputs:
@@ -57,7 +57,6 @@ steps:
       **\*Tests*.dll
       !**\*testadapter.dll
       !**\obj\**'
-    searchFolder: '$(System.DefaultWorkingDirectory)/publish_output'
     vsTestVersion: 'toolsInstaller'
    
 - task: PublishTestResults@2
