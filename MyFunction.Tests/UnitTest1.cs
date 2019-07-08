@@ -15,5 +15,11 @@ namespace MyFunction.Tests
         {
             Assert.False(false);
         }
+
+        [Fact]
+        public void Test3()
+        {
+            Assert.False(false);
+        }
     }
 }
