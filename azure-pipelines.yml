@@ -61,7 +61,13 @@ steps:
     archiveFile: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
     replaceExistingArchive: true
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)/'
+    Contents: 'build$(Build.BuildId).zip'
+    TargetFolder: '$(System.ArtifactStagingDirectory)'
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
+    PathtoPublish: '$(System.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
