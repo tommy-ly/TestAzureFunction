@@ -40,19 +40,6 @@ steps:
     zipAfterPublish: false
     arguments: 'MyFunction.Tests/MyFunction.Tests.csproj  --configuration Release --output ../output/MyFunction.Tests'
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'ls'
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'cd ''.\publish_output'';
-      ls;
-      cd ''.\bin'';
-      ls'
-
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
