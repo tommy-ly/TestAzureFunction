@@ -6,18 +6,15 @@
 pool:
   vmImage: 'windows-2019'
 
+trigger:
+  branches:
+    include:
+      - '*'
+  paths:
+    include:
+      - MyFunction/*
+      
 steps:
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'ls'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'restore'
-    projects: '**/*.csproj'
-    feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   inputs:
