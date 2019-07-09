@@ -6,12 +6,12 @@
 pool:
   vmImage: 'windows-2019'
 
-steps:
+trigger:
+  paths:
+    exclude:
+      - MyFunction.Tests/*
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'ls'
+steps:
 
 - task: DotNetCoreCLI@2
   inputs:
