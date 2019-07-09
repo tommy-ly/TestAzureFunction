@@ -7,11 +7,12 @@ pool:
   vmImage: 'windows-2019'
 
 trigger:
-  paths:
+  branches:
     include:
       - '*'
-    exclude:
-      - MyFunction.Tests/*
+  paths:
+    include:
+      - MyFunction/*
       
 steps:
 
