@@ -49,9 +49,8 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*Tests*.dll
-      !**\*testadapter.dll
-      !**\obj\**'
+      **/output/**/*Tests*.dll
+      !**/output/**/*testadapter*.dll
     vsTestVersion: 'toolsInstaller'
       
 - task: ArchiveFiles@2
