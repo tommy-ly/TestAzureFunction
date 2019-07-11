@@ -6,20 +6,12 @@
 pool:
   vmImage: 'windows-2019'
 
-trigger:
-  branches:
-    include:
-      - '*'
-  paths:
-    include:
-      - MyFunction/*
-      
 steps:
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/*.csproj'
+    projects: './*.csproj'
 
 - task: DotNetCoreCLI@2
   inputs:
@@ -27,32 +19,11 @@ steps:
     publishWebProjects: false
     modifyOutputPath: false
     zipAfterPublish: false
-    arguments: 'MyFunction/MyFunction.csproj  --configuration Release --output ../output/MyFunction'
-  
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'publish'
-    publishWebProjects: false
-    modifyOutputPath: false
-    zipAfterPublish: false
-    arguments: 'MyFunction.Tests/MyFunction.Tests.csproj  --configuration Release --output ../output/MyFunction.Tests'
-
-- task: VisualStudioTestPlatformInstaller@1
-  inputs:
-    packageFeedSelector: 'nugetOrg'
-    versionSelector: 'latestPreRelease'
-
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **/output/**/*Tests*.dll
-      !**/output/**/*testadapter*.dll
-    vsTestVersion: 'toolsInstaller'
-      
+    arguments: 'MyFunction/MyFunction.csproj  --configuration Release --output ../artifacts/MyFunction'
+    
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/output'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/artifacts'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
